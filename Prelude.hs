@@ -17,10 +17,10 @@ import Prelude hiding ((>>=),return)
 import qualified Control.Monad as CM
 
 bindIO :: IO a -> (a -> IO b) -> IO b
-bindIO m f = m >>= f
+bindIO m f = (CM.>>=) m f
 
 returnIO :: a -> IO a
-returnIO a = return a 
+returnIO a = CM.return a 
 
 integerAdd :: Integer -> Integer 
 integerAdd a b = a + b
