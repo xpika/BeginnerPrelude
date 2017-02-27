@@ -1,4 +1,4 @@
-module Benner.Prelude (
+module Beginner.Prelude (
     map, (++), concat, filter,
     head, last, tail, init, null, length, (!!),
     foldl,
