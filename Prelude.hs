@@ -17,13 +17,13 @@ import Prelude hiding ((>>=),return)
 import qualified Control.Monad as CM
 
 bindIO :: IO a -> (a -> IO b) -> IO b
-bindIO = (>>=) 
+bindIO m f = m >>= f
 
 returnIO :: a -> IO a
-returnIO = return 
+returnIO a = return a 
 
 integerAdd :: Integer -> Integer 
-integerAdd = (+)
+integerAdd a b = a + b
 
 fold :: (a -> b -> a) -> a -> [b] -> a
 fold f z []     = z
