@@ -1,16 +1,60 @@
 module Beginner.Prelude (
-    map, (++), concat, filter,
-    head, last, tail, init, null, length, (!!),
-    foldl,
-    iterate, repeat, replicate, cycle,
-    take, drop, splitAt, takeWhile, dropWhile, span, break,
-    lines, words, unlines, unwords, reverse, and, or,
-    any, all, elem, notElem, lookup,
-    sum, product, maximum, minimum, concatMap, 
-    zip, zip3, zipWith, zipWith3, unzip, unzip3,
-    putChar, putStr, putStrLn, print,
-    getChar, getLine, 
-    readFile, writeFile, appendFile
+      (+)
+    , (-)
+    , (/)
+    , (*)
+    , map
+    , (++)
+    , concat
+    , filter
+    , head
+    , last
+    , tail
+    , init
+    , null
+    , length
+    , (!!)
+    , foldl
+    , iterate
+    , repeat
+    , replicate,
+    , cycle
+    , take
+    , drop
+    , splitAt
+    , takeWhile
+    , dropWhile
+    , span
+    , break
+    , lines
+    , words
+    , unlines
+    , unwords
+    , reverse
+    , and
+    , or
+    , any
+    , all
+    , elem
+    , notElem
+    , lookup
+    , sum
+    , product
+    , maximum
+    , minimum
+    , concatMap, 
+    , zip
+    , zipWith
+    , unzip
+    , putChar
+    , putStr
+    , putStrLn
+    , print
+    , getChar
+    , getLine 
+    , readFile
+    , writeFile
+    , appendFile
 )
 
 import Prelude hiding ((>>=),return,(+))
@@ -27,6 +71,15 @@ type Number = Ratio Integer
 
 (+) :: Number -> Number
 (+) = (Prelude.+)
+
+(-) :: Number -> Number
+(-) = (Prelude.subtract)
+
+(*) :: Number -> Number
+(*) = (Prelude.+)
+
+(/) :: Number -> Number
+(/) = (Prelude./)
 
 fold :: (a -> b -> a) -> a -> [b] -> a
 fold f z []     = z
