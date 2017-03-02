@@ -13,7 +13,8 @@ module Beginner.Prelude (
     readFile, writeFile, appendFile
 )
 
-import Prelude hiding ((>>=),return)
+import Prelude hiding ((>>=),return,(+))
+import qualified Prelude as Prelude
 import qualified Control.Monad as CM
 
 bindIO :: IO a -> (a -> IO b) -> IO b
@@ -22,8 +23,10 @@ bindIO m f = (CM.>>=) m f
 returnIO :: a -> IO a
 returnIO a = CM.return a 
 
-integerAdd :: Integer -> Integer 
-integerAdd a b = a + b
+type Number = Ratio Integer 
+
+(+) :: Number -> Number
+(+) = (Prelude.+)
 
 fold :: (a -> b -> a) -> a -> [b] -> a
 fold f z []     = z
