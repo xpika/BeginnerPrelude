@@ -69,6 +69,9 @@ returnIO a = CM.return a
 
 type Number = Ratio Integer 
 
+instance Show Number where 
+  show a = undefind
+
 (+) :: Number -> Number
 (+) = (Prelude.+)
 
