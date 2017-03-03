@@ -70,7 +70,7 @@ returnIO a = CM.return a
 type Number = Ratio Integer 
 
 instance Show Number where 
-  show a = undefind
+  show a = printf "%d" (fromRational a)
 
 (+) :: Number -> Number
 (+) = (Prelude.+)
