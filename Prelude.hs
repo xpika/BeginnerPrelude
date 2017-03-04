@@ -14,7 +14,7 @@ module Beginner.Prelude (
     , null
     , length
     , (!!)
-    , foldl
+    , fold
     , iterate
     , repeat
     , replicate,
