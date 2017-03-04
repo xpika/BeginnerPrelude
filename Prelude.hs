@@ -23,7 +23,6 @@ module Beginner.Prelude (
     , drop
     , splitAt
     , takeWhile
-    , dropWhile
     , span
     , break
     , lines
@@ -36,7 +35,6 @@ module Beginner.Prelude (
     , any
     , all
     , elem
-    , notElem
     , lookup
     , sum
     , product
