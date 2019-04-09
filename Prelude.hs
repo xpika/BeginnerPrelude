@@ -1,3 +1,5 @@
+{-# LANGUAGE FlexibleInstances #-}
+
 module Beginner.Prelude (
       (+)
     , (-)
@@ -89,4 +91,8 @@ fold f z (x:xs) = fold f (f z x) xs
 map :: (a -> b) -> [a] -> [b]
 map f (x:xs) = f x : map xs
 map f [] = [] 
+
+instance {-# OVERLAPS #-} Show [Char] where
+  show = id
+
 
