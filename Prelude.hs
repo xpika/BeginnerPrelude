@@ -84,6 +84,8 @@ instance Show Number where
 (/) :: Number -> Number
 (/) = (Prelude./)
 
+-- fold left
+
 fold :: (a -> b -> a) -> a -> [b] -> a
 fold f z []     = z
 fold f z (x:xs) = fold f (f z x) xs
